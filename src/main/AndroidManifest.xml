@@ -17,8 +17,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
           package="com.oasisfeng.nevo.decorators" android:versionCode="1" android:versionName="1.0">
 
-    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="27" />
-
     <application android:label="[Nevo] Misc" android:allowBackup="true" tools:ignore="GoogleAppIndexingWarning,MissingApplicationIcon">
 
         <service
