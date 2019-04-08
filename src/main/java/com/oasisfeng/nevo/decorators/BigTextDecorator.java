@@ -29,15 +29,12 @@ import com.oasisfeng.nevo.sdk.NevoDecoratorService;
  */
 public class BigTextDecorator extends NevoDecoratorService {
 
-	private static final int MIN_TEXT_LENGTH = 20;
-
 	@Override public void apply(final MutableStatusBarNotification evolved) {
 		final Notification n = evolved.getNotification();
 		if (n.bigContentView != null) return;
 		final Bundle extras = n.extras;
 		final CharSequence text = extras.getCharSequence(Notification.EXTRA_TEXT);
 		if (text == null) return;
-		if (text.length() < MIN_TEXT_LENGTH) return;
 
 		extras.putCharSequence(Notification.EXTRA_TITLE_BIG, extras.getCharSequence(Notification.EXTRA_TITLE));
 		extras.putCharSequence(Notification.EXTRA_BIG_TEXT, text);
