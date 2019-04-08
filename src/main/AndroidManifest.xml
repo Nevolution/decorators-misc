@@ -17,7 +17,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
           package="com.oasisfeng.nevo.decorators" android:versionCode="1" android:versionName="1.0">
 
-    <application android:label="[Nevo] Misc" android:allowBackup="true" tools:ignore="GoogleAppIndexingWarning,MissingApplicationIcon">
+    <application android:label="@string/decorators_misc_label" android:allowBackup="false" tools:ignore="GoogleAppIndexingWarning,MissingApplicationIcon">
 
         <service
             android:name=".StackDecorator"
