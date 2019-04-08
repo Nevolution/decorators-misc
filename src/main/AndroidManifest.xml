@@ -17,10 +17,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
           package="com.oasisfeng.nevo.decorators" android:versionCode="1" android:versionName="1.0">
 
-    <application android:label="@string/decorators_misc_label" android:allowBackup="false" tools:ignore="GoogleAppIndexingWarning,MissingApplicationIcon">
+    <application android:label="@string/decorators_misc_label" android:allowBackup="false" android:directBootAware="true" tools:targetApi="n"
+                 tools:ignore="GoogleAppIndexingWarning,MissingApplicationIcon">
 
         <service
             android:name=".StackDecorator"
+            android:directBootAware="true"
             android:permission="com.oasisfeng.nevo.permission.BIND_DECORATOR_SERVICE"
             android:process="com.oasisfeng.nevo.decorators"
             android:label="@string/decorator_stack_title"
@@ -32,6 +34,7 @@
 
         <service
             android:name=".BigTextDecorator"
+            android:directBootAware="true"
             android:permission="com.oasisfeng.nevo.permission.BIND_DECORATOR_SERVICE"
             android:process="com.oasisfeng.nevo.decorators"
             android:label="@string/decorator_big_text_title"
@@ -43,6 +46,7 @@
 
         <service
             android:name=".NoStickyDecorator"
+            android:directBootAware="true"
             android:permission="com.oasisfeng.nevo.permission.BIND_DECORATOR_SERVICE"
             android:process="com.oasisfeng.nevo.decorators"
             android:label="@string/decorator_no_sticky_title"
