@@ -18,4 +18,20 @@
 <resources>
     <string name="decorator_miui_label">nevo-decorator-miui</string>
     <string name="decorator_miui_description">make small-icon of MiPushFramework great again...</string>
+    <string-array name="decorator_miui_embed">
+        <item>com.chinatelecom.bestpayclient</item>
+        <item>com.jd.jrapp</item>
+        <item>com.jingdong.app.mall</item>
+        <item>com.ruguoapp.jike</item>
+        <item>com.suning.mobile.ebuy</item>
+        <item>com.suning.mobile.epa</item>
+        <item>com.taobao.idlefish</item>
+        <item>com.taobao.taobao</item>
+        <item>com.tmall.wireless</item>
+        <item>com.xiaomi.shop</item>
+        <item>com.xiaomi.smarthome</item>
+        <item>com.xiaomi.youpin</item>
+        <item>com.zongheng.reader</item>
+    </string-array>
+    <string name="com_xiaomi_smarthome">#19ca89</string>
 </resources>
