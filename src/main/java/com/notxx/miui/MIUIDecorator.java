@@ -1,6 +1,7 @@
 package com.notxx.miui;
 
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
 import android.graphics.Color;
 import android.graphics.drawable.Icon;
 import android.os.Build;
@@ -39,7 +40,17 @@ public class MIUIDecorator extends NevoDecoratorService {
         Log.d(TAG, "begin modifying");
         Icon defIcon = Icon.createWithResource(this, R.drawable.default_notification_icon);
         Bundle extras = n.extras;
-        String packageName = extras.getString("target_package", null);
+		final ApplicationInfo appInfo = n.extras.getParcelable("android.appInfo");
+        String packageName = null;
+        try {
+            packageName = appInfo.packageName;
+            if ("com.xiaomi.xmsf".equals(packageName))
+                packageName = extras.getString("target_package", null);
+		} catch (final RuntimeException ignored) {}    // Fall-through
+        if (packageName == null) {
+            Log.e(TAG, "packageName is null");
+            return;
+        }
         extras.putBoolean("miui.isGrayscaleIcon", true);
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             // do nothing

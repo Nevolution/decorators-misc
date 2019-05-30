@@ -21,10 +21,12 @@ if (! project.plugins.hasPlugin("com.android.feature")) apply plugin: 'com.andro
 
 android {
     compileSdkVersion 28
+
     defaultConfig {
         minSdkVersion 26
         targetSdkVersion 28
-        }
+        resConfigs "en", "zh"
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

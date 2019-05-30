@@ -31,6 +31,7 @@
             <intent-filter android:priority="-5">
                 <action android:name="com.oasisfeng.nevo.Decorator" />
             </intent-filter>
+            <meta-data android:name="packages" android:value="com.xiaomi.xmsf" />
         </service>
 
     </application>
