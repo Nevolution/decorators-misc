@@ -19,15 +19,22 @@
     <string name="decorator_miui_label">nevo-decorator-miui</string>
     <string name="decorator_miui_description">make small-icon of MiPushFramework great again...</string>
     <string-array name="decorator_miui_embed">
+        <item>com.baidu.BaiduMap</item>
         <item>com.chinatelecom.bestpayclient</item>
+        <item>com.coolapk.market</item>
+        <item>com.dianping.v1</item>
         <item>com.jd.jrapp</item>
         <item>com.jingdong.app.mall</item>
         <item>com.ruguoapp.jike</item>
+        <item>com.sankuai.meitu</item>
+        <item>com.sdu.didi.psnger</item>
+        <item>com.smzdm.client</item>
         <item>com.suning.mobile.ebuy</item>
         <item>com.suning.mobile.epa</item>
         <item>com.taobao.idlefish</item>
         <item>com.taobao.taobao</item>
         <item>com.tmall.wireless</item>
+        <item>com.tmri.app.main</item>
         <item>com.xiaomi.shop</item>
         <item>com.xiaomi.smarthome</item>
         <item>com.xiaomi.youpin</item>

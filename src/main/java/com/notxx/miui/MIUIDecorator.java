@@ -28,7 +28,7 @@ public class MIUIDecorator extends NevoDecoratorService {
         this.embed = new ArrayMap<>(array.length);
         // Log.d(TAG, "array: " + array.length);
         for (String s : array) {
-            this.embed.put(s, s.replaceAll("\\.", "_"));
+            this.embed.put(s, s.toLowerCase().replaceAll("\\.", "_"));
             // Log.d(TAG, s);
         }
         // Log.d(TAG, "end onConnected");
