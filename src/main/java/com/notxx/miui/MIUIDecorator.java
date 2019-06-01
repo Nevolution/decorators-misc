@@ -40,10 +40,9 @@ public class MIUIDecorator extends NevoDecoratorService {
         Log.d(TAG, "begin modifying");
         Icon defIcon = Icon.createWithResource(this, R.drawable.default_notification_icon);
         Bundle extras = n.extras;
-		final ApplicationInfo appInfo = n.extras.getParcelable("android.appInfo");
         String packageName = null;
         try {
-            packageName = appInfo.packageName;
+            packageName = evolving.getPackageName();
             if ("com.xiaomi.xmsf".equals(packageName))
                 packageName = extras.getString("target_package", null);
 		} catch (final RuntimeException ignored) {}    // Fall-through
