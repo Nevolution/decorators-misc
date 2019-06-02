@@ -36,10 +36,32 @@
         <item>com.taobao.taobao</item>
         <item>com.tmall.wireless</item>
         <item>com.tmri.app.main</item>
+        <item>com.xiaomi.market</item>
         <item>com.xiaomi.shop</item>
         <item>com.xiaomi.smarthome</item>
         <item>com.xiaomi.youpin</item>
         <item>com.zongheng.reader</item>
     </string-array>
+    <string name="com_baidu_baidumap">#ED4134</string>
+    <string name="com_chinatelecom_bestpayclient">#F54950</string>
+    <!-- <string name="com_coolapk_market"></string> -->
+    <string name="com_dianping_v1">#F86332</string>
+    <string name="com_jd_jrapp">#E02319</string>
+    <string name="com_jingdong_app_mall">#E02319</string>
+    <!-- <string name="com_mivideo_mifm"></string> -->
+    <string name="com_ruguoapp_jike">#5BBCF2</string>
+    <string name="com_sankuai_meituan">#3AB3A7</string>
+    <string name="com_sdu_didi_psnger">#F68D51</string>
+    <string name="com_smzdm_client_android">#EA4548</string>
+    <string name="com_suning_mobile_ebuy">#F8A500</string>
+    <string name="com_suning_mobile_epa">#0089DE</string>
+    <string name="com_taobao_idlefish">#F7DF10</string>
+    <string name="com_taobao_taobao">#F84E00</string>
+    <string name="com_tmall_wireless">#FE0035</string>
+    <string name="com_tmri_app_main">#0564E5</string>
+    <string name="com_xiaomi_market">#E86205</string>
+    <string name="com_xiaomi_shop">#F76700</string>
     <string name="com_xiaomi_smarthome">#19ca89</string>
+    <string name="com_xiaomi_youpin">#82592F</string>
+    <string name="com_zongheng_reader">#AA2419</string>
 </resources>
