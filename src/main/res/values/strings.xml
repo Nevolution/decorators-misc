@@ -19,10 +19,12 @@
     <string name="decorator_miui_label">nevo-decorator-miui</string>
     <string name="decorator_miui_description">make small-icon of MiPushFramework great again...</string>
     <string-array name="decorator_miui_embed">
+        <item>cn.com.weilaihui3</item>
         <item>com.baidu.BaiduMap</item>
         <item>com.chinatelecom.bestpayclient</item>
         <item>com.coolapk.market</item>
         <item>com.dianping.v1</item>
+        <item>com.eg.android.AlipayGphone</item>
         <item>com.jd.jrapp</item>
         <item>com.jingdong.app.mall</item>
         <item>com.mivideo.mifm</item>
@@ -42,10 +44,12 @@
         <item>com.xiaomi.youpin</item>
         <item>com.zongheng.reader</item>
     </string-array>
+    <string name="cn_com_weilaihui3">#03B8BA</string>
     <string name="com_baidu_baidumap">#ED4134</string>
     <string name="com_chinatelecom_bestpayclient">#F54950</string>
     <!-- <string name="com_coolapk_market"></string> -->
     <string name="com_dianping_v1">#F86332</string>
+    <string name="com_eg_android_alipaygphone">#00AAEF</string>
     <string name="com_jd_jrapp">#E02319</string>
     <string name="com_jingdong_app_mall">#E02319</string>
     <!-- <string name="com_mivideo_mifm"></string> -->
