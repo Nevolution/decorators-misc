@@ -21,6 +21,7 @@
     <string-array name="decorator_miui_embed">
         <item>cn.com.weilaihui3</item>
         <item>com.baidu.BaiduMap</item>
+        <item>com.cainiao.wireless</item>
         <item>com.chinatelecom.bestpayclient</item>
         <item>com.coolapk.market</item>
         <item>com.dianping.v1</item>
@@ -38,6 +39,7 @@
         <item>com.taobao.taobao</item>
         <item>com.tmall.wireless</item>
         <item>com.tmri.app.main</item>
+        <item>com.unionpay</item>
         <item>com.xiaomi.market</item>
         <item>com.xiaomi.shop</item>
         <item>com.xiaomi.smarthome</item>
@@ -46,6 +48,7 @@
     </string-array>
     <string name="cn_com_weilaihui3">#03B8BA</string>
     <string name="com_baidu_baidumap">#ED4134</string>
+    <string name="com_cainiao_wireless">#0043FE</string>
     <string name="com_chinatelecom_bestpayclient">#F54950</string>
     <!-- <string name="com_coolapk_market"></string> -->
     <string name="com_dianping_v1">#F86332</string>
@@ -63,6 +66,7 @@
     <string name="com_taobao_taobao">#F84E00</string>
     <string name="com_tmall_wireless">#FE0035</string>
     <string name="com_tmri_app_main">#0564E5</string>
+    <string name="com_unionpay">#EC231E</string>
     <string name="com_xiaomi_market">#E86205</string>
     <string name="com_xiaomi_shop">#F76700</string>
     <string name="com_xiaomi_smarthome">#19ca89</string>
