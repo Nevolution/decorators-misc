@@ -28,6 +28,7 @@
         <item>com.eg.android.AlipayGphone</item>
         <item>com.jd.jrapp</item>
         <item>com.jingdong.app.mall</item>
+        <item>com.miui.player</item>
         <item>com.mivideo.mifm</item>
         <item>com.ruguoapp.jike</item>
         <item>com.sankuai.meituan</item>
@@ -55,6 +56,7 @@
     <string name="com_eg_android_alipaygphone">#00AAEF</string>
     <string name="com_jd_jrapp">#E02319</string>
     <string name="com_jingdong_app_mall">#E02319</string>
+    <string name="com_miui_player">#E05E5E</string>
     <!-- <string name="com_mivideo_mifm"></string> -->
     <string name="com_ruguoapp_jike">#5BBCF2</string>
     <string name="com_sankuai_meituan">#3AB3A7</string>
