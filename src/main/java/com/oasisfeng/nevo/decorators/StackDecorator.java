@@ -36,13 +36,13 @@ public class StackDecorator extends NevoDecoratorService {
 
 	private static final int KMaxNumLines = 10;
 
-	@Override public void apply(final MutableStatusBarNotification evolving) {
+	@Override public boolean apply(final MutableStatusBarNotification evolving) {
 		final Notification n = evolving.getNotification();
 		final String template = n.extras.getString(Notification.EXTRA_TEMPLATE);
-		if (template != null && ! template.equals(TEMPLATE_BIG_TEXT)) return;		// Skip except for BigTextStyle.
+		if (template != null && ! template.equals(TEMPLATE_BIG_TEXT)) return false;
 
 		final Collection<StatusBarNotification> history = getArchivedNotifications(evolving.getKey(), KMaxNumLines);
-		if (history.size() <= 1) return;
+		if (history.size() <= 1) return false;
 
 		final List<CharSequence> lines = new ArrayList<>(KMaxNumLines);
 		for (final StatusBarNotification sbn : history) {
@@ -51,12 +51,13 @@ public class StackDecorator extends NevoDecoratorService {
 			if (text != null) lines.add(text);
 			if (lines.size() >= KMaxNumLines) break;
 		}
-		if (lines.isEmpty()) return;
+		if (lines.isEmpty()) return false;
 		Collections.reverse(lines);			// Latest first, since earliest lines will be trimmed by InboxStyle.
 
 		n.extras.putString(Notification.EXTRA_TEMPLATE, TEMPLATE_INBOX);
-		n.extras.putCharSequenceArray(Notification.EXTRA_TEXT_LINES, lines.toArray(new CharSequence[lines.size()]));
+		n.extras.putCharSequenceArray(Notification.EXTRA_TEXT_LINES, lines.toArray(new CharSequence[0]));
 		final CharSequence title = n.extras.getCharSequence(Notification.EXTRA_TITLE);
 		if (title != null) n.extras.putCharSequence(Notification.EXTRA_TITLE_BIG, title);
+		return true;
 	}
 }

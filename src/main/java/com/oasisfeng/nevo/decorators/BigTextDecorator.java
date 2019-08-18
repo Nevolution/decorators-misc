@@ -29,15 +29,16 @@ import com.oasisfeng.nevo.sdk.NevoDecoratorService;
  */
 public class BigTextDecorator extends NevoDecoratorService {
 
-	@Override public void apply(final MutableStatusBarNotification evolved) {
+	@Override public boolean apply(final MutableStatusBarNotification evolved) {
 		final Notification n = evolved.getNotification();
-		if (n.bigContentView != null) return;
+		if (n.bigContentView != null) return false;
 		final Bundle extras = n.extras;
 		final CharSequence text = extras.getCharSequence(Notification.EXTRA_TEXT);
-		if (text == null) return;
+		if (text == null) return false;
 
 		extras.putCharSequence(Notification.EXTRA_TITLE_BIG, extras.getCharSequence(Notification.EXTRA_TITLE));
 		extras.putCharSequence(Notification.EXTRA_BIG_TEXT, text);
 		extras.putString(Notification.EXTRA_TEMPLATE, TEMPLATE_BIG_TEXT);
+		return true;
 	}
 }

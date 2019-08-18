@@ -35,6 +35,6 @@ android {
 }
 
 dependencies {
-    implementation 'com.oasisfeng.nevo:sdk:1.2.0'
+    implementation 'com.oasisfeng.nevo:sdk:2.0.0-rc01'
     implementation 'com.android.support:support-annotations:28.0.0'
 }

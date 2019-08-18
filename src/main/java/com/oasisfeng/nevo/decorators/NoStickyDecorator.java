@@ -37,19 +37,20 @@ import static android.os.Build.VERSION_CODES.O;
 	private static final String ACTION_HIDE = "HIDE";
 	private static final String SCHEME = "key";
 
-	@Override protected void apply(final MutableStatusBarNotification evolving) {
-		if (! evolving.isOngoing()) return;
+	@Override protected boolean apply(final MutableStatusBarNotification evolving) {
+		if (! evolving.isOngoing()) return false;
 		final String key = evolving.getKey();
 		if (mHiddenKeys.contains(key)) {
 			snoozeNotification(key, 7 * 24 * 3600_000L);		// Never set a too-large duration to avoid time overflow.
 			Log.i(TAG, "Hide blacklisted notification: " + evolving.getKey() + " (" + evolving.getNotification().extras.getCharSequence(EXTRA_TITLE) + ")");
 		}
+		return false;
 	}
 
-	@Override protected void onNotificationRemoved(final StatusBarNotification sbn, final int reason) {
-		if (reason != NotificationListenerService.REASON_SNOOZED) return;
-		if (! sbn.isOngoing()) return;
-		if (mHiddenKeys.contains(sbn.getKey())) return;
+	@Override protected boolean onNotificationRemoved(final StatusBarNotification sbn, final int reason) {
+		if (reason != NotificationListenerService.REASON_SNOOZED) return false;
+		if (! sbn.isOngoing()) return false;
+		if (mHiddenKeys.contains(sbn.getKey())) return false;
 
 		final NotificationManager nm = Objects.requireNonNull(getSystemService(NotificationManager.class));
 		final Intent intent = new Intent(ACTION_HIDE, Uri.fromParts(SCHEME, sbn.getKey(), null)).setPackage(getPackageName());
@@ -57,6 +58,7 @@ import static android.os.Build.VERSION_CODES.O;
 				.setContentTitle(getString(R.string.no_sticky_prompt_title)).setContentText(sbn.getNotification().extras.getCharSequence(EXTRA_TITLE))
 				.setContentIntent(PendingIntent.getBroadcast(this, 0, intent, FLAG_UPDATE_CURRENT)).setAutoCancel(true)
 				.setSubText(getString(R.string.no_sticky_prompt_sub_text)).setTimeoutAfter(NOTIFICATION_TIMEOUT).build());
+		return false;
 	}
 
 	private String ensureNotificationChannelCreated(final NotificationManager nm) {
