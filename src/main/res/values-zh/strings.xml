@@ -25,7 +25,7 @@
     <string name="decorator_stack_description">将同一个通知栏位被覆盖的历史消息以列表的形式堆叠展现。</string>
 
     <string name="decorator_big_text_title">多行文本</string>
-    <string name="decorator_big_text_description">将单行文本扩展为可展开的多行文本，以展现超过一行被截断的完整内容。</string>
+    <string name="decorator_big_text_description">将单行文本扩展为多行文本，以展现超过一行被截断的完整内容。</string>
 
     <string name="decorator_no_sticky_title">隐藏顽固通知</string>
     <string name="decorator_no_sticky_description">隐藏无法被划掉的通知。（对通知执行延后操作可触发）</string>
