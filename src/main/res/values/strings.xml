@@ -18,6 +18,9 @@
 <resources>
     <string name="decorators_misc_label">Nevo - Misc</string>
 
+    <string name="decorator_ongoing_container_title">Sticky Drawer</string>
+    <string name="decorator_ongoing_container_description">Group sticky (ongoing) notifications into one tiny piece. Low-priority sticky notifications from the selected targets will be grouped automatically, while other sticky ones from the selected targets can be grouped manually with "Snooze" action.</string>
+
     <string name="decorator_elastic_inbox_title">Elastic List</string>
     <string name="decorator_elastic_inbox_description">Stretch the single-lined list into multi-lined for list-style notifications, to make the most of the available space when there are only a few lines.</string>
 

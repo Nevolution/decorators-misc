@@ -18,6 +18,9 @@
 <resources>
     <string name="decorators_misc_label">女娲石 - 通用插件集</string>
 
+    <string name="decorator_ongoing_container_title">划不掉的统统收进来</string>
+    <string name="decorator_ongoing_container_description">将划不掉的通知收纳进一个单行的分组。所选应用划不掉的低优先级通知将被自动收纳，其它划不掉的通知可以通过通知栏的“延后”操作（部分系统可能不支持或需要在设置中启用）手动收纳。</string>
+
     <string name="decorator_elastic_inbox_title">弹性列表</string>
     <string name="decorator_elastic_inbox_description">将原本每条单行的列表式通知伸展为每条可显示多行文字，使行数较少的列表可显示更完整的内容。</string>
 
