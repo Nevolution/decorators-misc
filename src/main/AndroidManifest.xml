@@ -57,20 +57,6 @@
             </intent-filter>
         </service>
 
-        <service
-            android:name=".NoStickyDecorator"
-            android:directBootAware="true"
-            android:permission="com.oasisfeng.nevo.permission.BIND_DECORATOR_SERVICE"
-            android:process="com.oasisfeng.nevo.decorators"
-            android:label="@string/decorator_no_sticky_title"
-            android:description="@string/decorator_no_sticky_description"
-            android:enabled="@bool/since_api_26">
-            <intent-filter android:priority="-5">
-                <action android:name="com.oasisfeng.nevo.Decorator" />
-            </intent-filter>
-            <meta-data android:name="hint_only_sticky" android:value="true" />
-        </service>
-
     </application>
 
 </manifest>
